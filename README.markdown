@@ -16,6 +16,8 @@ Peran **stored procedure**, **trigger**, **transaction**, **stored function** da
 
 ## 🧠 Stored Procedure
 **Stored procedure** berfungsi sebagai alur kerja standar (SOP) yang dieksekusi di lapisan database. Procedure ini memastikan konsistensi dan efisiensi dalam operasi seperti perhitungan nilai akhir seminar. Dengan menyimpan logika di database, sistem ini mendukung keandalan dalam lingkungan terdistribusi atau multi-user.
+![image](https://github.com/user-attachments/assets/2b4f75f9-4b38-44cc-946a-a1273812e409)
+
 
 ### Procedure
 **Stored procedure** utama yang digunakan:
@@ -41,6 +43,8 @@ Dengan menyimpan logika ini di database, SIPESMA menjaga integritas data terlepa
 
 ## 🚨 Trigger
 **Trigger** bertindak sebagai mekanisme pengaman otomatis yang dijalankan sebelum atau sesudah operasi tertentu pada tabel. Trigger memastikan data tetap valid dan konsisten, seperti memperbarui status pendaftaran, dosen, dan seminar secara otomatis setelah penilaian.
+![image](https://github.com/user-attachments/assets/79df1ce2-ffde-4f71-af4c-861a6c72d893)
+
 
 ### Trigger
 Trigger utama dalam sistem ini:
@@ -128,6 +132,8 @@ Trigger ini memastikan reliabilitas sistem, bahkan jika ada kesalahan atau kelal
 
 ## 📺 Stored Function
 **Stored function** digunakan untuk menghitung atau mengambil informasi tanpa mengubah data. Fungsi ini memusatkan logika perhitungan di database, memastikan konsistensi hasil di seluruh aplikasi.
+![image](https://github.com/user-attachments/assets/df96f67d-46bd-4f4e-b68d-07455165a98e)
+
 
 ### Function
 Fungsi utama dalam sistem:
