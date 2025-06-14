@@ -2,7 +2,6 @@
 
 Proyek ini adalah sistem pendaftaran seminar kerja praktik yang dibangun menggunakan PHP dan MySQL. Tujuannya adalah untuk mengelola pendaftaran seminar mahasiswa, penjadwalan, penilaian, dan manajemen dosen penguji secara efisien dan terstruktur. Sistem ini memanfaatkan **stored procedure**, **trigger**, **transaction**, dan **stored function** untuk menjamin konsistensi data, keamanan proses, dan otomatisasi tugas-tugas penting. Fitur seperti validasi otomatis dan log perubahan memastikan integritas data dalam lingkungan multi-user.
 
-**[Home](https://github.com/DYmazeh/Kelompok11_PDT_SIPESMA)**
 
 ## 📌 Detail Konsep
 
@@ -24,9 +23,10 @@ Beberapa **stored procedure** penting yang digunakan:
 
 
 calculate_final_grade(p_id_pendaftaran): Menghitung rata-rata nilai dari dua dosen penguji dan menentukan status kelulusan.
-// -- Called in after_hasil_seminar_insert trigger
+  ```sql
+//Called in after_hasil_seminar_insert trigger
 CALL calculate_final_grade(NEW.id_pendaftaran);
-
+```
 
 
 Dengan menyimpan logika ini di database, SIPESMA menjaga integritas data terlepas dari cara aplikasi mengaksesnya, meminimalkan risiko kesalahan dari sisi aplikasi.
