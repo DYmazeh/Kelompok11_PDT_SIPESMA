@@ -191,13 +191,12 @@ if not exist "%backupDir%" mkdir "%backupDir%"
 
 REM === EKSEKUSI BACKUP ===
 "%mysqlBinPath%\mysqldump.exe" -u %dbUser% %dbName% > "%backupDir%\%fileName%"
-
 echo Backup selesai: %fileName%
 ```
 
 **Catatan**:
 - Pastikan direktori `storage/backups` ada dan memiliki izin tulis:
-  ```bash
+```
 if not exist "%backupDir%" mkdir "%backupDir%"
   ```
 - Sesuaikan path `mysqldump` sesuai lingkungan server Anda (e.g., `C:\laragon\bin\mysql\mysql-8.0.30-winx64\bin` di Windows).
