@@ -1,7 +1,3 @@
-**SIPESMA**
-
-Proyek ini merupakan Sistem Informasi Pendaftaran dan Kelulusan Seminar Mahasiswa dikhususkan untuk seminar KP. Proyek ini dibangun dengan menggunakan PHP dan MySQL. Tujuan proyek ini adalah mmembantu mahasiswa dan admin mempermudah proses pendaftaran dan kelulusan pada seminar kp dengan memanfaatkan stored procedure, trigger, transaction, dan stored function. Sistem ini juga dilengkapi mekanisme backup otomatis untuk menjaga keamanan data jika terjadi hal yang tidak diinginkan.
-
 # 🐾 SIPESMA (Sistem Pendaftaran Seminar)
 
 Proyek ini adalah sistem pendaftaran seminar kerja praktik yang dibangun menggunakan PHP dan MySQL. Tujuannya adalah untuk mengelola pendaftaran seminar mahasiswa, penjadwalan, penilaian, dan manajemen dosen penguji secara efisien dan terstruktur. Sistem ini memanfaatkan **stored procedure**, **trigger**, **transaction**, dan **stored function** untuk menjamin konsistensi data, keamanan proses, dan otomatisasi tugas-tugas penting. Fitur seperti validasi otomatis dan log perubahan memastikan integritas data dalam lingkungan multi-user.
