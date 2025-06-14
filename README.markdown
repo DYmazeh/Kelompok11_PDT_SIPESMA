@@ -5,6 +5,7 @@ Proyek ini adalah sistem pendaftaran seminar kerja praktik yang dibangun menggun
 
 
 ## 📌 Detail Konsep
+![db](https://github.com/user-attachments/assets/883d06d4-a0a5-4aeb-9c1a-b7e5daeec8e1)
 
 ### ⚠️ Disclaimer
 Peran **stored procedure**, **trigger**, **transaction**, **stored function** dan **backup otomatis** dalam SIPESMA dirancang khusus untuk kebutuhan sistem pendaftaran seminar. Implementasinya dapat bervariasi pada sistem lain, tergantung pada arsitektur dan kebutuhan spesifik.
