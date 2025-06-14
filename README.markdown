@@ -1,9 +1,8 @@
-```markdown
+
 # 🐾 SIPESMA (Sistem Pendaftaran Seminar)
 
 Proyek ini adalah sistem pendaftaran seminar kerja praktik yang dibangun menggunakan PHP dan MySQL. Tujuannya adalah untuk mengelola pendaftaran seminar mahasiswa, penjadwalan, penilaian, dan manajemen dosen penguji secara efisien dan terstruktur. Sistem ini memanfaatkan **stored procedure**, **trigger**, **transaction**, dan **stored function** untuk menjamin konsistensi data, keamanan proses, dan otomatisasi tugas-tugas penting. Fitur seperti validasi otomatis, log perubahan, dan pengelolaan kuota seminar memastikan integritas data dalam lingkungan multi-user.
 
-**[Home](https://github.com/DYmazeh/Kelompok11_PDT_SIPESMA)**
 
 ## 📌 Detail Konsep
 
@@ -269,7 +268,9 @@ Kelompok11_PDT_SIPESMA/
 ---
 
 ## 👥 Kontributor
-- [DYmazeh](https://github.com/DYmazeh) - Koordinator Proyek
+- [DYmazeh](https://github.com/DYmazeh)
+- [luckyboy002](https://github.com/luckyboy002) 
+- [nafisyaa](https://github.com/nafisyaa)
 - Kelompok 11 PDT - Pengembang Sistem
 
 ---
