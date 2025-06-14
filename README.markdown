@@ -167,24 +167,40 @@ Fungsi utama dalam sistem:
 SIPESMA dilengkapi dengan mekanisme **backup otomatis** menggunakan `mysqldump` dan task scheduler untuk menjaga keamanan data. Backup dilakukan secara berkala dan disimpan dengan nama file yang mencakup timestamp di direktori `storage/backups`.
 
 ### Contoh Implementasi
-```php
-// File: backup.php
-<?php
-require_once __DIR__ . '/config/db.php';
+```@echo off
+REM === SETUP VARIABLE ===
+set dbUser=root
+set dbPass=
+set dbName=seminar_kp
+set backupDir=D:\DOWNLOAD\seminar_kp
+set mysqlBinPath=C:\laragon\bin\mysql\mysql-8.0.30-winx64\bin
 
-$date = date('Y-m-d_H-i-s');
-$backupFile = __DIR__ . "/storage/backups/sipesma_backup_$date.sql";
-$command = "\"C:\\laragon\\bin\\mysql\\mysql-8.0.30-winx64\\bin\\mysqldump.exe\" -u " . DB_USER . " -p" . DB_PASS . " " . DB_NAME . " > \"$backupFile\"";
-exec($command);
+
+REM === FORMAT TANGGAL & WAKTU ===
+for /f "tokens=2 delims==" %%I in ('"wmic os get LocalDateTime /value"') do set datetime=%%I
+set year=%datetime:~0,4%
+set month=%datetime:~4,2%
+set day=%datetime:~6,2%
+set hour=%datetime:~8,2%
+set minute=%datetime:~10,2%
+set second=%datetime:~12,2%
+set fileName=%dbName%_backup_%year%-%month%-%day%_%hour%%minute%%second%.sql
+
+REM === PASTIKAN FOLDER BACKUP ADA ===
+if not exist "%backupDir%" mkdir "%backupDir%"
+
+REM === EKSEKUSI BACKUP ===
+"%mysqlBinPath%\mysqldump.exe" -u %dbUser% %dbName% > "%backupDir%\%fileName%"
+
+echo Backup selesai: %fileName%
 ```
 
 **Catatan**:
 - Pastikan direktori `storage/backups` ada dan memiliki izin tulis:
   ```bash
-  mkdir -p storage/backups
-  chmod -R u+w storage/backups
+if not exist "%backupDir%" mkdir "%backupDir%"
   ```
-- Sesuaikan path `mysqldump` sesuai lingkungan server Anda (e.g., `/usr/bin/mysqldump` di Linux).
+- Sesuaikan path `mysqldump` sesuai lingkungan server Anda (e.g., `C:\laragon\bin\mysql\mysql-8.0.30-winx64\bin` di Windows).
 
 ---
 
