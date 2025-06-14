@@ -23,7 +23,8 @@ Beberapa **stored procedure** penting yang digunakan:
   $pdo->prepare("CALL add_dosen(?, ?, ?)")->execute([$nama, $keahlian, $status]);
 
 
-calculate_final_grade(p_id_pendaftaran): Menghitung rata-rata nilai dari dua dosen penguji dan menentukan status kelulusan.-- Called in after_hasil_seminar_insert trigger
+calculate_final_grade(p_id_pendaftaran): Menghitung rata-rata nilai dari dua dosen penguji dan menentukan status kelulusan.
+// -- Called in after_hasil_seminar_insert trigger
 CALL calculate_final_grade(NEW.id_pendaftaran);
 
 
